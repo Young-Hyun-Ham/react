@@ -1,0 +1,95 @@
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 10%;
+  min-width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Creates space between links */
+}
+
+.main-content {
+  flex: 0 0 70%;
+  padding: 20px;
+}
+
+/* Styling the links */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* Tab 관련 style */
+.nav-tabs {
+  flex: 1; /* Takes up the maximum width except for the space needed by the clear all button */
+  display: flex;
+  margin-right: 10px; /* Ensures a little space between tabs and the clear all button */
+}
+
+.home-tab .nav-item {
+  width: 20px;  /* Fixed width for the Home tab */
+  overflow: hidden; /* Ensures no overflow text is visible */
+  text-overflow: ellipsis; /* Adds ellipsis if text is too long */
+  padding: 5px; /* Consistent padding */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.menu-panel {
+  width: 20%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 10px;  /* Padding for better spacing */
+}
+
+.content-panel {
+  flex-grow: 1;
+  padding: 10px;
+  width: 79%;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;  /* Full width to accommodate text and button */
+  padding: 5px; /* Padding for aesthetics */
+  border: 1px solid #ccc; /* Optional border for visibility */
+}
+
+.nav-link {
+  flex-grow: 1; /* Allows the link to expand and fill the space, pushing the close button to the right */
+  overflow: hidden; /* Prevents overflow of text */
+  white-space: nowrap; /* Prevents text wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+  text-align: center; /* Centers text within the tab */
+}
+
+.nav-link.active {
+  background-color: #0D6EFD; /* Blue background for active tab */
+  color: rgb(255, 255, 255); /* White text for active tab */
+  font-weight: bold;
+}
+
+.tab-close-button, .all-tabs-close-button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.all-tabs-close-button {
+  margin-top: 18px;
+  margin-left: auto; /* This pushes the close all button to the far right */
+}
